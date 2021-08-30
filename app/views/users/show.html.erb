@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Welcome <%= @user.name %></h1>
+<% if @user.admin %>
+    <p><strong>PLEASE NOTE THAT YOU ARE LOGGED ON ADMIN ACCESS</strong></p>
+<% end %>
+<p>Mood: <%= @user.mood %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Nausea: <%= @user.nausea %></p>
+<p>Height: <%= @user.height %></p>
+
+<%= link_to "See attractions", attractions_path %>
+
+<a class="navbar-brand" href="<%= logout_url %>"/>Log Out</a>
